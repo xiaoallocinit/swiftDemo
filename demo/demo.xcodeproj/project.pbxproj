@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D185842215DD7AA003CA3C0 /* ChatTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D185841215DD7AA003CA3C0 /* ChatTextView.swift */; };
+		2D185844215DD7B3003CA3C0 /* PhotoSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D185843215DD7B3003CA3C0 /* PhotoSelector.swift */; };
+		2D185846215DD7BF003CA3C0 /* EmotionSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D185845215DD7BF003CA3C0 /* EmotionSelector.swift */; };
+		2D185848215DD7C9003CA3C0 /* EmotionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D185847215DD7C9003CA3C0 /* EmotionHelper.swift */; };
+		2D18584C215DF98B003CA3C0 /* Emoticons.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2D18584B215DF98B003CA3C0 /* Emoticons.bundle */; };
+		2D18584E215DF992003CA3C0 /* emotion.json in Resources */ = {isa = PBXBuildFile; fileRef = 2D18584D215DF992003CA3C0 /* emotion.json */; };
+		2D185850215DFD81003CA3C0 /* XZBExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D18584F215DFD81003CA3C0 /* XZBExtention.swift */; };
 		2D73EB04215B2C3D00B597A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D73EB03215B2C3D00B597A0 /* AppDelegate.swift */; };
 		2D73EB06215B2C3D00B597A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D73EB05215B2C3D00B597A0 /* ViewController.swift */; };
 		2D73EB09215B2C3D00B597A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D73EB07215B2C3D00B597A0 /* Main.storyboard */; };
@@ -42,6 +49,13 @@
 
 /* Begin PBXFileReference section */
 		061EF13F35D5A569C930BA53 /* Pods-demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-demo/Pods-demo.debug.xcconfig"; sourceTree = "<group>"; };
+		2D185841215DD7AA003CA3C0 /* ChatTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatTextView.swift; sourceTree = "<group>"; };
+		2D185843215DD7B3003CA3C0 /* PhotoSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoSelector.swift; sourceTree = "<group>"; };
+		2D185845215DD7BF003CA3C0 /* EmotionSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmotionSelector.swift; sourceTree = "<group>"; };
+		2D185847215DD7C9003CA3C0 /* EmotionHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmotionHelper.swift; sourceTree = "<group>"; };
+		2D18584B215DF98B003CA3C0 /* Emoticons.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Emoticons.bundle; sourceTree = "<group>"; };
+		2D18584D215DF992003CA3C0 /* emotion.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = emotion.json; sourceTree = "<group>"; };
+		2D18584F215DFD81003CA3C0 /* XZBExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XZBExtention.swift; sourceTree = "<group>"; };
 		2D73EB00215B2C3D00B597A0 /* demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D73EB03215B2C3D00B597A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D73EB05215B2C3D00B597A0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +105,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D18583E215DD5E7003CA3C0 /* 聊天弹出输入框 */ = {
+			isa = PBXGroup;
+			children = (
+				2D18584D215DF992003CA3C0 /* emotion.json */,
+				2D18584B215DF98B003CA3C0 /* Emoticons.bundle */,
+				2D185841215DD7AA003CA3C0 /* ChatTextView.swift */,
+				2D185843215DD7B3003CA3C0 /* PhotoSelector.swift */,
+				2D185845215DD7BF003CA3C0 /* EmotionSelector.swift */,
+				2D185847215DD7C9003CA3C0 /* EmotionHelper.swift */,
+				2D18584F215DFD81003CA3C0 /* XZBExtention.swift */,
+			);
+			path = "聊天弹出输入框";
+			sourceTree = "<group>";
+		};
 		2D73EAF7215B2C3D00B597A0 = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +144,7 @@
 		2D73EB02215B2C3D00B597A0 /* demo */ = {
 			isa = PBXGroup;
 			children = (
+				2D18583E215DD5E7003CA3C0 /* 聊天弹出输入框 */,
 				2D73EB3D215B57B500B597A0 /* 弹出选择试图 */,
 				2D73EB38215B541200B597A0 /* 分享Share */,
 				2D73EB31215B300700B597A0 /* 提示语TipsShow */,
@@ -298,8 +327,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D73EB0E215B2C3F00B597A0 /* LaunchScreen.storyboard in Resources */,
+				2D18584C215DF98B003CA3C0 /* Emoticons.bundle in Resources */,
 				2D73EB0B215B2C3F00B597A0 /* Assets.xcassets in Resources */,
 				2D73EB09215B2C3D00B597A0 /* Main.storyboard in Resources */,
+				2D18584E215DF992003CA3C0 /* emotion.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,12 +382,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-demo/Pods-demo-resources.sh",
+				"${PODS_ROOT}/SKPhotoBrowser/SKPhotoBrowser/SKPhotoBrowser.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/SwiftMessages/SwiftMessages.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SKPhotoBrowser.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SwiftMessages.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -371,14 +404,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D185846215DD7BF003CA3C0 /* EmotionSelector.swift in Sources */,
 				2D73EB3F215B58DA00B597A0 /* XZBSystemActionSheet.swift in Sources */,
+				2D185842215DD7AA003CA3C0 /* ChatTextView.swift in Sources */,
 				2D73EB06215B2C3D00B597A0 /* ViewController.swift in Sources */,
 				2D73EB41215B5B7200B597A0 /* XZBActionSheet.swift in Sources */,
 				2D73EB3A215B543200B597A0 /* XZBShareView.swift in Sources */,
+				2D185844215DD7B3003CA3C0 /* PhotoSelector.swift in Sources */,
 				2D73EB37215B52F400B597A0 /* XZBShowMessage.swift in Sources */,
+				2D185848215DD7C9003CA3C0 /* EmotionHelper.swift in Sources */,
 				2D73EB04215B2C3D00B597A0 /* AppDelegate.swift in Sources */,
 				2D73EB33215B303E00B597A0 /* XZBShowTips.swift in Sources */,
 				2D73EB3C215B55B300B597A0 /* Const.swift in Sources */,
+				2D185850215DFD81003CA3C0 /* XZBExtention.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

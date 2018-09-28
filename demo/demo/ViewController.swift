@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SKPhotoBrowser
 
 class ViewController: UIViewController {
     lazy  var table:UITableView = {
@@ -29,6 +30,8 @@ class ViewController: UIViewController {
         return tableView
         
     }();
+    var textView = ChatTextView.init()
+    
     fileprivate let cellIdentifier = "tableViewCell"
     fileprivate let sectionTitles = ["",
                                      "ShowTips",
@@ -36,7 +39,7 @@ class ViewController: UIViewController {
                                      "Share分享仿抖音",
                                      "XZBSystemActionSheet",
                                      "XZBActionSheet",
-                                     "YawRotation",
+                                     "聊天弹出输入框",
                                      "ScaleAnimation",
                                      "Custom"]
     override func viewDidLoad() {
@@ -44,9 +47,33 @@ class ViewController: UIViewController {
         view.backgroundColor = .white
         view.addSubview(table)
         self.title = "🍎上的豌豆"
+        initRightBarButton(imageName: "youjiantou")
     }
-
-
+    func initRightBarButton(imageName: String) {
+        let rightButton = UIBarButtonItem.init(image: UIImage.init(named: imageName), style: .plain, target: self, action: #selector(munu))
+        rightButton.tintColor = .black
+        self.navigationItem.rightBarButtonItem = rightButton;
+    }
+    @objc func munu() {
+        let menu = UIMenuController.shared
+        self.becomeFirstResponder()
+        if !menu.isMenuVisible {
+            menu.arrowDirection = .down
+            menu.setTargetRect(CGRect.init(x: 60, y: 100, width: 120, height: 50), in: self.view)
+            let copy = UIMenuItem.init(title: "复制", action: #selector(onMenuCopy))
+            let delete = UIMenuItem.init(title: "删除", action: #selector(onMenuDelete))
+            menu.menuItems = [copy, delete]
+            menu.setMenuVisible(true, animated: true)
+        }
+    }
+    @objc func onMenuCopy() {
+        XZBShowMessage.ShowTopTips(msg: "Copy成功")
+    }
+    
+    @objc func onMenuDelete() {
+        XZBShowMessage.ShowTopTips(msg: "Delete成功")
+        
+    }
 }
 // MARK: - UITableViewDataSource
 extension ViewController: UITableViewDataSource {
@@ -55,6 +82,8 @@ extension ViewController: UITableViewDataSource {
         cell = UITableViewCell(style: .default, reuseIdentifier: cellIdentifier)
         cell.selectionStyle = .none
         cell.textLabel?.text = sectionTitles[indexPath.row]
+        
+        
         return cell
     }
     
@@ -110,9 +139,59 @@ extension ViewController : UITableViewDelegate{
             }
             menu.show()
             break
+            
+        case 6:
+            textView.show()
+            textView.delegate = self
+            break
+            
+        case 7:
+            XZBShareView.init().show()
+            break
+            
+            
+        case 8:
+            XZBShareView.init().show()
+            break
+            
+            
+        case 9:
+            XZBShareView.init().show()
+            break
         default: break
             
         }
         
     }
 }
+extension ViewController:ChatTextViewDelegate {
+    func onSendText(text: String) {
+        XZBShowMessage.ShowTopTips(msg: text)
+        
+    }
+    
+    func onSendImages(images: [UIImage]) {
+       
+        var SKPhotoImages = [SKPhoto]()
+        
+        for image in images {
+            let photo = SKPhoto.photoWithImage(image as UIImage)
+            SKPhotoImages.append(photo)
+        }
+        
+        textView.dismiss()
+
+        let browser = SKPhotoBrowser(photos: SKPhotoImages)
+        browser.initializePageIndex(0)
+        present(browser, animated: true, completion: {})
+    }
+    
+    func onEditBoardHeightChange(height: CGFloat) {
+        table.contentInset = UIEdgeInsets.init(top: 0, left: 0, bottom: height, right: 0)
+        
+    }
+    
+    
+}
+
+

@@ -4,7 +4,7 @@ target 'demo' do
     
     #消息提示
     pod 'SwiftMessages'
-    
+    pod 'SKPhotoBrowser'
     pod 'SnapKit'
-   
+    
 end
