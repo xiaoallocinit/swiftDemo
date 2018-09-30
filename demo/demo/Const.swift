@@ -24,6 +24,8 @@ func colorWithHex(hex : Int , alpha : CGFloat) -> UIColor{
 func colorWithHex(hex : Int) -> UIColor {
     return colorWithHex(hex: hex, alpha: 1)
 }
+
+
 let backgroundColor = colorWithHex(hex: 0x000000, alpha: 0.8)
 let XZBColorTitle   = colorWithHex(hex: 0x333333)
 

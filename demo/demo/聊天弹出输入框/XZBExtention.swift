@@ -122,3 +122,41 @@ extension NSTextAttachment {
     }
 }
 
+extension UIApplication {
+    var statusBarView: UIView? {
+        if responds(to: Selector(("statusBar"))) {
+            return value(forKey: "statusBar") as? UIView
+        }
+        return nil
+    }
+}
+extension UIImage {
+    ///  Use current image for pattern of color
+    public func withColor(_ tintColor: UIColor) -> UIImage {
+        UIGraphicsBeginImageContextWithOptions(self.size, false, self.scale)
+        
+        let context = UIGraphicsGetCurrentContext()
+        context?.translateBy(x: 0, y: self.size.height)
+        context?.scaleBy(x: 1.0, y: -1.0)
+        context?.setBlendMode(CGBlendMode.normal)
+        
+        let rect = CGRect(x: 0, y: 0, width: self.size.width, height: self.size.height) as CGRect
+        context?.clip(to: rect, mask: self.cgImage!)
+        tintColor.setFill()
+        context?.fill(rect)
+        
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()! as UIImage
+        UIGraphicsEndImageContext()
+        
+        return newImage
+    }
+}
+
+
+extension UIColor {
+    static func randomColor() -> UIColor {
+        
+        return UIColor(red: CGFloat(Float(arc4random()%255)/255.0), green: 145/255.0, blue: 255/255.0, alpha: 1.0)
+    
+    }
+}
