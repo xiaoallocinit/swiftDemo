@@ -14,6 +14,7 @@
 		2D18584C215DF98B003CA3C0 /* Emoticons.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2D18584B215DF98B003CA3C0 /* Emoticons.bundle */; };
 		2D18584E215DF992003CA3C0 /* emotion.json in Resources */ = {isa = PBXBuildFile; fileRef = 2D18584D215DF992003CA3C0 /* emotion.json */; };
 		2D185850215DFD81003CA3C0 /* XZBExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D18584F215DFD81003CA3C0 /* XZBExtention.swift */; };
+		2D64C4222160B76F00A3F081 /* XZBScrollTopTipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D64C4212160B76F00A3F081 /* XZBScrollTopTipsView.swift */; };
 		2D73EB04215B2C3D00B597A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D73EB03215B2C3D00B597A0 /* AppDelegate.swift */; };
 		2D73EB09215B2C3D00B597A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D73EB07215B2C3D00B597A0 /* Main.storyboard */; };
 		2D73EB0B215B2C3F00B597A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D73EB0A215B2C3F00B597A0 /* Assets.xcassets */; };
@@ -58,6 +59,7 @@
 		2D18584B215DF98B003CA3C0 /* Emoticons.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Emoticons.bundle; sourceTree = "<group>"; };
 		2D18584D215DF992003CA3C0 /* emotion.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = emotion.json; sourceTree = "<group>"; };
 		2D18584F215DFD81003CA3C0 /* XZBExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XZBExtention.swift; sourceTree = "<group>"; };
+		2D64C4212160B76F00A3F081 /* XZBScrollTopTipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = XZBScrollTopTipsView.swift; path = ../../../../../../Documents/XZBScrollTopTipsView.swift; sourceTree = "<group>"; };
 		2D73EB00215B2C3D00B597A0 /* demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D73EB03215B2C3D00B597A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D73EB08215B2C3D00B597A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -123,6 +125,14 @@
 			path = "聊天弹出输入框";
 			sourceTree = "<group>";
 		};
+		2D64C4202160B71100A3F081 /* 上下滚动提示 */ = {
+			isa = PBXGroup;
+			children = (
+				2D64C4212160B76F00A3F081 /* XZBScrollTopTipsView.swift */,
+			);
+			path = "上下滚动提示";
+			sourceTree = "<group>";
+		};
 		2D73EAF7215B2C3D00B597A0 = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +158,7 @@
 		2D73EB02215B2C3D00B597A0 /* demo */ = {
 			isa = PBXGroup;
 			children = (
+				2D64C4202160B71100A3F081 /* 上下滚动提示 */,
 				2DF411E7215F280900509FBA /* 仿抖音个人主页 */,
 				2DF411E4215F1D1E00509FBA /* 循环滚动label */,
 				2D18583E215DD5E7003CA3C0 /* 聊天弹出输入框 */,
@@ -432,6 +443,7 @@
 				2D73EB41215B5B7200B597A0 /* XZBActionSheet.swift in Sources */,
 				2DF411EB215F2BE500509FBA /* DYHeadView.swift in Sources */,
 				2D73EB3A215B543200B597A0 /* XZBShareView.swift in Sources */,
+				2D64C4222160B76F00A3F081 /* XZBScrollTopTipsView.swift in Sources */,
 				2D185844215DD7B3003CA3C0 /* PhotoSelector.swift in Sources */,
 				2D73EB37215B52F400B597A0 /* XZBShowMessage.swift in Sources */,
 				2D185848215DD7C9003CA3C0 /* EmotionHelper.swift in Sources */,

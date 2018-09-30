@@ -89,6 +89,14 @@ extension DYViewController{
         rightButton.tintColor = .black
         self.navigationItem.rightBarButtonItem = rightButton;
     }
+    func scroollTopTips(cell :UITableViewCell){
+        let topTips  = XZBScrollTopTipsView.init(frame: cell.bounds)
+        topTips.sectionTitles = ["是你家是哪家武汉市军运会",
+                                "🍎上的豌豆",
+                                "去网上买个什么清洁济试试"
+        ]
+        cell.addSubview(topTips)
+    }
     func circleText(cell :UITableViewCell){
         let gradientLayer:CAGradientLayer = CAGradientLayer.init()
         gradientLayer.colors = [ColorClear.cgColor, ColorBlackAlpha20.cgColor, ColorBlackAlpha40.cgColor]
@@ -139,6 +147,10 @@ extension DYViewController: UITableViewDataSource {
         if  indexPath.row == 0 {
             self.circleText(cell: cell)
         }
+        if  indexPath.row == 7 {
+            self.scroollTopTips(cell: cell)
+        }
+        
         cell.textLabel?.font = Font_Bold_25
         cell.textLabel?.textColor = UIColor.randomColor()
         return cell
@@ -201,7 +213,9 @@ extension DYViewController : UITableViewDelegate{
             textView.show()
             textView.delegate = self
             break
+        case 7:
             
+            break
         
         default: break
             
