@@ -1,4 +1,4 @@
-module SKPhotoBrowser {
+framework module SKPhotoBrowser {
   umbrella header "SKPhotoBrowser-umbrella.h"
 
   export *

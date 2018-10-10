@@ -14,6 +14,9 @@ let screenHeight = UIScreen.main.bounds.size.height
 let statusBarHeight = UIApplication.shared.statusBarFrame.height
 let screenFrame:CGRect = UIScreen.main.bounds
 
+let XZBHeadH :CGFloat = 300
+
+
 //color
 func RGBA(r:CGFloat, g:CGFloat, b:CGFloat, a:CGFloat) ->UIColor {
     return UIColor.init(red: r / 255.0, green: g / 255.0, blue: b / 255.0, alpha: a)

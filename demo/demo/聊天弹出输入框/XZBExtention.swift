@@ -8,6 +8,7 @@
 
 import UIKit
 import Foundation
+import SnapKit
 
 extension String {
     
@@ -158,5 +159,27 @@ extension UIColor {
         
         return UIColor(red: CGFloat(Float(arc4random()%255)/255.0), green: 145/255.0, blue: 255/255.0, alpha: 1.0)
     
+    }
+    
+    func image() -> UIImage {
+        let rect = CGRect(x: 0, y: 0, width: 1, height: 1)
+        UIGraphicsBeginImageContext(rect.size)
+        let context = UIGraphicsGetCurrentContext()
+        context!.setFillColor(self.cgColor)
+        context!.fill(rect)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image!
+    }
+}
+//MARK: SnapKit
+extension ConstraintView {
+    
+    var usnp: ConstraintBasicAttributesDSL {
+        if #available(iOS 11.0, *) {
+            return self.safeAreaLayoutGuide.snp
+        } else {
+            return self.snp
+        }
     }
 }

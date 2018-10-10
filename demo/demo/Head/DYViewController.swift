@@ -9,17 +9,15 @@
 import UIKit
 import SKPhotoBrowser
 var USER_INFO_HEADER_HEIGHT:CGFloat = 320 + statusBarHeight
+
+
+
+
 class DYViewController: UIViewController {
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationSetting()
-    }
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
+    
     lazy  var table:UITableView = {
         
-        let tableView = UITableView.init(frame: UIScreen.main.bounds, style: UITableView.Style.grouped)
+        let tableView = UITableView.init(frame:.zero, style: UITableView.Style.grouped)
         tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
         tableView.rowHeight          = UITableView.automaticDimension
         tableView.estimatedRowHeight = 100
@@ -28,6 +26,8 @@ class DYViewController: UIViewController {
         if #available(iOS 11.0, *) {
             
             tableView.contentInsetAdjustmentBehavior = .never
+        }else {
+            automaticallyAdjustsScrollViewInsets = false
         }
         tableView.delegate = self
         tableView.dataSource = self
@@ -38,49 +38,35 @@ class DYViewController: UIViewController {
         
     }();
     fileprivate let cellIdentifier = "tableViewCell"
-    //头部视图
-    fileprivate  var header = DYHeadView.init(frame: CGRect(x:0,y:0,width:screenWidth,height:USER_INFO_HEADER_HEIGHT))
+    
     
     fileprivate var textView = ChatTextView.init()
-    fileprivate let sectionTitles = ["",
+    
+    weak var delegate: UComicViewWillEndDraggingDelegate?
+    
+    fileprivate let sectionTitles = [ "",
                                      "ShowTips",
                                      "ShowSwiftMessages",
                                      "Share分享仿抖音",
                                      "XZBSystemActionSheet",
                                      "XZBActionSheet",
                                      "聊天弹出输入框",
-                                    "","","","","","","","","","","",""]
+                                    "","","","",""]
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         view.addSubview(table)
-        table.tableHeaderView = header
-        header.delegate = self
+       table.snp.makeConstraints {$0.edges.equalTo(self.view.usnp.edges) }
+        
     }
 
 
 }
 extension DYViewController{
-    func navigationSetting(){
-        //self.navigationItem.title = "🍎上的豌豆"
-        self.navigationController?.navigationBar.shadowImage = UIImage.init()
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage.init(), for: .default)//这句代码很重要
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.clear]
-        self.navigationController?.navigationBar.backgroundColor = UIColor.clear
-        UIApplication.shared.statusBarStyle = .lightContent
-        UIApplication.shared.isStatusBarHidden = false
-        UIApplication.shared.statusBarView?.backgroundColor = UIColor.clear
-    }
-    func createImage(color: UIColor) -> UIImage? {
-        let rect = CGRect(x: 0.0, y: 0.0, width: 1.0, height: 1.0)
-        UIGraphicsBeginImageContext(rect.size)
-        let context = UIGraphicsGetCurrentContext()
-        context?.setFillColor(color.cgColor)
-        context?.fill(rect)
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return image ?? nil
-    }
+    
+    
+    
+    
     func navagationBarHeight()->CGFloat {
         return self.navigationController?.navigationBar.frame.size.height ?? 0;
     }
@@ -258,56 +244,39 @@ extension DYViewController: UIScrollViewDelegate {
     //实现UIScrollViewDelegate中的scrollViewDidScroll方法
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         //获取当前控件y方向的偏移量
-        let offsetY = scrollView.contentOffset.y
-        if offsetY < 0 {
-            header.overScrollAction(offsetY: offsetY)
-        } else {
-            header.scrollToTopAction(offsetY: offsetY)
-            updateNavigationTitle(offsetY: offsetY)
-        }
+        //let offsetY = scrollView.contentOffset.y
+//        if offsetY < 0 {
+//            header.overScrollAction(offsetY: offsetY)
+//        } else {
+//            header.scrollToTopAction(offsetY: offsetY)
+//            updateNavigationTitle(offsetY: offsetY)
+//        }
     }
     
-    func updateNavigationTitle(offsetY:CGFloat) {
-        if USER_INFO_HEADER_HEIGHT - self.navagationBarHeight()*2 > offsetY {
-            
-            self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:ColorClear]
-        }
-        
-        if USER_INFO_HEADER_HEIGHT - self.navagationBarHeight()*2 < offsetY && offsetY < USER_INFO_HEADER_HEIGHT - self.navagationBarHeight() {
-            let alphaRatio = 1.0 - (USER_INFO_HEADER_HEIGHT - self.navagationBarHeight() - offsetY)/self.navagationBarHeight()
-            
-            self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.init(red: 1.0, green: 1.0, blue: 1.0, alpha: alphaRatio)]
-        }
-        
-        if offsetY > USER_INFO_HEADER_HEIGHT - self.navagationBarHeight() {
-            
-            
-             self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:ColorWhite]
-        }
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        delegate?.comicWillEndDragging(scrollView)
     }
+
+//    func updateNavigationTitle(offsetY:CGFloat) {
+//        if USER_INFO_HEADER_HEIGHT - self.navagationBarHeight()*2 > offsetY {
+//            barStyle(.clear)
+//            navigationItem.title = ""
+//            
+//        }
+//        
+//        if USER_INFO_HEADER_HEIGHT - self.navagationBarHeight()*2 < offsetY && offsetY < USER_INFO_HEADER_HEIGHT - self.navagationBarHeight() {
+//            let alphaRatio = 1.0 - (USER_INFO_HEADER_HEIGHT - self.navagationBarHeight() - offsetY)/self.navagationBarHeight()
+//           navigationItem.title = "苹果上的豌豆"
+//            self.navigationController?.navigationBar.setBackgroundImage(UIColor.init(red: 255.0, green: 255.0, blue: 255.0, alpha: alphaRatio).image(), for: .default)
+//            self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.init(red: 1.0, green: 1.0, blue: 1.0, alpha: alphaRatio)]
+//        }
+//        
+//        if offsetY > USER_INFO_HEADER_HEIGHT - self.navagationBarHeight() {
+//            
+//            barStyle(.white)
+//             navigationItem.title = "苹果上的豌豆"
+//             self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:ColorBlack]
+//        }
+//    }
 }
-extension DYViewController: UserInfoDelegate {
-    
-    func onUserActionTap(tag: Int) {
-        switch tag {
-        case AVATAE_TAG:
-            XZBShowMessage.ShowTopTips(msg: "头像")
-            break
-        case SEND_MESSAGE_TAG:
-            XZBShowMessage.ShowTopTips(msg: "消息")
-            break
-        case FOCUS_CANCEL_TAG,FOCUS_TAG:
-            XZBShowMessage.ShowTopTips(msg: "关注")
-            
-            break
-        case SETTING_TAG:
-            XZBShowMessage.ShowTopTips(msg: "设置")
-            break
-       
-        default:
-            break
-        }
-    }
-    
-   
-}
+

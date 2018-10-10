@@ -1,10 +1,10 @@
 platform :ios, '9.0'
-
+use_frameworks!
 target 'demo' do
     
     #消息提示
     pod 'SwiftMessages'
     pod 'SKPhotoBrowser'
     pod 'SnapKit'
-    
+    pod 'HMSegmentedControl'
 end

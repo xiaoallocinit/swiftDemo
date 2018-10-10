@@ -1,4 +1,5 @@
 PODS:
+  - HMSegmentedControl (1.5.5)
   - SKPhotoBrowser (6.0.0)
   - SnapKit (4.0.1)
   - SwiftMessages (6.0.0):
@@ -6,21 +7,24 @@ PODS:
   - SwiftMessages/App (6.0.0)
 
 DEPENDENCIES:
+  - HMSegmentedControl
   - SKPhotoBrowser
   - SnapKit
   - SwiftMessages
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - HMSegmentedControl
     - SKPhotoBrowser
     - SnapKit
     - SwiftMessages
 
 SPEC CHECKSUMS:
+  HMSegmentedControl: f514c6dad47aa3065e0ed2e8046b73efc71221b9
   SKPhotoBrowser: 76eb862685761707b5745fde7762757966565e07
   SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
   SwiftMessages: da7c981256a65b3e58022d9027a36584cf4eccf5
 
-PODFILE CHECKSUM: e556da1db87f740aec708a23ee860a9d0302b5f5
+PODFILE CHECKSUM: 5c9a67de29589fc673d333073a6fcab0f8f95988
 
 COCOAPODS: 1.5.3

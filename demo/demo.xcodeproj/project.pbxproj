@@ -14,6 +14,11 @@
 		2D18584C215DF98B003CA3C0 /* Emoticons.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2D18584B215DF98B003CA3C0 /* Emoticons.bundle */; };
 		2D18584E215DF992003CA3C0 /* emotion.json in Resources */ = {isa = PBXBuildFile; fileRef = 2D18584D215DF992003CA3C0 /* emotion.json */; };
 		2D185850215DFD81003CA3C0 /* XZBExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D18584F215DFD81003CA3C0 /* XZBExtention.swift */; };
+		2D3F7D52216DE78F00FBC067 /* XZBPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3F7D51216DE78F00FBC067 /* XZBPageViewController.swift */; };
+		2D3F7D5B216DEF5800FBC067 /* ParallaxHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3F7D58216DEF5800FBC067 /* ParallaxHeader.swift */; };
+		2D3F7D5C216DEF5800FBC067 /* ParallaxHeaderMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3F7D59216DEF5800FBC067 /* ParallaxHeaderMode.swift */; };
+		2D3F7D5D216DEF5800FBC067 /* UIScrollView+ParallaxHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3F7D5A216DEF5800FBC067 /* UIScrollView+ParallaxHeader.swift */; };
+		2D3F7D5F216DFE7A00FBC067 /* XZBBasePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3F7D5E216DFE7A00FBC067 /* XZBBasePageViewController.swift */; };
 		2D64C4222160B76F00A3F081 /* XZBScrollTopTipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D64C4212160B76F00A3F081 /* XZBScrollTopTipsView.swift */; };
 		2D73EB04215B2C3D00B597A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D73EB03215B2C3D00B597A0 /* AppDelegate.swift */; };
 		2D73EB09215B2C3D00B597A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D73EB07215B2C3D00B597A0 /* Main.storyboard */; };
@@ -30,7 +35,7 @@
 		2DF411E6215F1D5000509FBA /* CircleTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF411E5215F1D5000509FBA /* CircleTextView.swift */; };
 		2DF411E9215F282600509FBA /* DYViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF411E8215F282600509FBA /* DYViewController.swift */; };
 		2DF411EB215F2BE500509FBA /* DYHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF411EA215F2BE500509FBA /* DYHeadView.swift */; };
-		3CC7AEA0D14B84DCA2297D75 /* libPods-demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9FFE8A2953CFF4B4FFAD460 /* libPods-demo.a */; };
+		470EF1BECAD049149501459E /* Pods_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8452FA0EFB6B50D91B1785FA /* Pods_demo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +64,11 @@
 		2D18584B215DF98B003CA3C0 /* Emoticons.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Emoticons.bundle; sourceTree = "<group>"; };
 		2D18584D215DF992003CA3C0 /* emotion.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = emotion.json; sourceTree = "<group>"; };
 		2D18584F215DFD81003CA3C0 /* XZBExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XZBExtention.swift; sourceTree = "<group>"; };
+		2D3F7D51216DE78F00FBC067 /* XZBPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XZBPageViewController.swift; sourceTree = "<group>"; };
+		2D3F7D58216DEF5800FBC067 /* ParallaxHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParallaxHeader.swift; sourceTree = "<group>"; };
+		2D3F7D59216DEF5800FBC067 /* ParallaxHeaderMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParallaxHeaderMode.swift; sourceTree = "<group>"; };
+		2D3F7D5A216DEF5800FBC067 /* UIScrollView+ParallaxHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+ParallaxHeader.swift"; sourceTree = "<group>"; };
+		2D3F7D5E216DFE7A00FBC067 /* XZBBasePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XZBBasePageViewController.swift; sourceTree = "<group>"; };
 		2D64C4212160B76F00A3F081 /* XZBScrollTopTipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = XZBScrollTopTipsView.swift; path = ../../../../../../Documents/XZBScrollTopTipsView.swift; sourceTree = "<group>"; };
 		2D73EB00215B2C3D00B597A0 /* demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D73EB03215B2C3D00B597A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -81,8 +91,8 @@
 		2DF411E5215F1D5000509FBA /* CircleTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleTextView.swift; sourceTree = "<group>"; };
 		2DF411E8215F282600509FBA /* DYViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DYViewController.swift; sourceTree = "<group>"; };
 		2DF411EA215F2BE500509FBA /* DYHeadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DYHeadView.swift; sourceTree = "<group>"; };
+		8452FA0EFB6B50D91B1785FA /* Pods_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B28552EEE3D1E6FD3C3D4289 /* Pods-demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-demo/Pods-demo.release.xcconfig"; sourceTree = "<group>"; };
-		C9FFE8A2953CFF4B4FFAD460 /* libPods-demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CC7AEA0D14B84DCA2297D75 /* libPods-demo.a in Frameworks */,
+				470EF1BECAD049149501459E /* Pods_demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +133,26 @@
 				2D18584F215DFD81003CA3C0 /* XZBExtention.swift */,
 			);
 			path = "聊天弹出输入框";
+			sourceTree = "<group>";
+		};
+		2D3F7D50216DD04B00FBC067 /* PageVC */ = {
+			isa = PBXGroup;
+			children = (
+				2D3F7D57216DEF5800FBC067 /* ParallaxHeader */,
+				2D3F7D51216DE78F00FBC067 /* XZBPageViewController.swift */,
+				2D3F7D5E216DFE7A00FBC067 /* XZBBasePageViewController.swift */,
+			);
+			path = PageVC;
+			sourceTree = "<group>";
+		};
+		2D3F7D57216DEF5800FBC067 /* ParallaxHeader */ = {
+			isa = PBXGroup;
+			children = (
+				2D3F7D58216DEF5800FBC067 /* ParallaxHeader.swift */,
+				2D3F7D59216DEF5800FBC067 /* ParallaxHeaderMode.swift */,
+				2D3F7D5A216DEF5800FBC067 /* UIScrollView+ParallaxHeader.swift */,
+			);
+			path = ParallaxHeader;
 			sourceTree = "<group>";
 		};
 		2D64C4202160B71100A3F081 /* 上下滚动提示 */ = {
@@ -158,8 +188,9 @@
 		2D73EB02215B2C3D00B597A0 /* demo */ = {
 			isa = PBXGroup;
 			children = (
+				2D3F7D50216DD04B00FBC067 /* PageVC */,
 				2D64C4202160B71100A3F081 /* 上下滚动提示 */,
-				2DF411E7215F280900509FBA /* 仿抖音个人主页 */,
+				2DF411E7215F280900509FBA /* Head */,
 				2DF411E4215F1D1E00509FBA /* 循环滚动label */,
 				2D18583E215DD5E7003CA3C0 /* 聊天弹出输入框 */,
 				2D73EB3D215B57B500B597A0 /* 弹出选择试图 */,
@@ -227,13 +258,13 @@
 			path = "循环滚动label";
 			sourceTree = "<group>";
 		};
-		2DF411E7215F280900509FBA /* 仿抖音个人主页 */ = {
+		2DF411E7215F280900509FBA /* Head */ = {
 			isa = PBXGroup;
 			children = (
 				2DF411E8215F282600509FBA /* DYViewController.swift */,
 				2DF411EA215F2BE500509FBA /* DYHeadView.swift */,
 			);
-			path = "仿抖音个人主页";
+			path = Head;
 			sourceTree = "<group>";
 		};
 		62C82E6B7273215A97E591D0 /* Pods */ = {
@@ -248,7 +279,7 @@
 		9727631CBC9E3C3C230515E4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C9FFE8A2953CFF4B4FFAD460 /* libPods-demo.a */,
+				8452FA0EFB6B50D91B1785FA /* Pods_demo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -264,7 +295,7 @@
 				2D73EAFC215B2C3D00B597A0 /* Sources */,
 				2D73EAFD215B2C3D00B597A0 /* Frameworks */,
 				2D73EAFE215B2C3D00B597A0 /* Resources */,
-				B7B6E4333E2A47E67E4EFB64 /* [CP] Copy Pods Resources */,
+				8E7FA8D16BB1984A308E0CAF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -406,7 +437,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B7B6E4333E2A47E67E4EFB64 /* [CP] Copy Pods Resources */ = {
+		8E7FA8D16BB1984A308E0CAF /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -414,20 +445,24 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-demo/Pods-demo-resources.sh",
-				"${PODS_ROOT}/SKPhotoBrowser/SKPhotoBrowser/SKPhotoBrowser.bundle",
-				"${PODS_CONFIGURATION_BUILD_DIR}/SwiftMessages/SwiftMessages.bundle",
+				"${SRCROOT}/Pods/Target Support Files/Pods-demo/Pods-demo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/HMSegmentedControl/HMSegmentedControl.framework",
+				"${BUILT_PRODUCTS_DIR}/SKPhotoBrowser/SKPhotoBrowser.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SKPhotoBrowser.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SwiftMessages.bundle",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HMSegmentedControl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SKPhotoBrowser.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-demo/Pods-demo-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-demo/Pods-demo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -437,19 +472,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D3F7D5F216DFE7A00FBC067 /* XZBBasePageViewController.swift in Sources */,
 				2D185846215DD7BF003CA3C0 /* EmotionSelector.swift in Sources */,
 				2D73EB3F215B58DA00B597A0 /* XZBSystemActionSheet.swift in Sources */,
 				2D185842215DD7AA003CA3C0 /* ChatTextView.swift in Sources */,
+				2D3F7D5D216DEF5800FBC067 /* UIScrollView+ParallaxHeader.swift in Sources */,
 				2D73EB41215B5B7200B597A0 /* XZBActionSheet.swift in Sources */,
 				2DF411EB215F2BE500509FBA /* DYHeadView.swift in Sources */,
+				2D3F7D5C216DEF5800FBC067 /* ParallaxHeaderMode.swift in Sources */,
 				2D73EB3A215B543200B597A0 /* XZBShareView.swift in Sources */,
 				2D64C4222160B76F00A3F081 /* XZBScrollTopTipsView.swift in Sources */,
 				2D185844215DD7B3003CA3C0 /* PhotoSelector.swift in Sources */,
+				2D3F7D5B216DEF5800FBC067 /* ParallaxHeader.swift in Sources */,
 				2D73EB37215B52F400B597A0 /* XZBShowMessage.swift in Sources */,
 				2D185848215DD7C9003CA3C0 /* EmotionHelper.swift in Sources */,
 				2DF411E6215F1D5000509FBA /* CircleTextView.swift in Sources */,
 				2D73EB04215B2C3D00B597A0 /* AppDelegate.swift in Sources */,
 				2D73EB33215B303E00B597A0 /* XZBShowTips.swift in Sources */,
+				2D3F7D52216DE78F00FBC067 /* XZBPageViewController.swift in Sources */,
 				2DF411E9215F282600509FBA /* DYViewController.swift in Sources */,
 				2D73EB3C215B55B300B597A0 /* Const.swift in Sources */,
 				2D185850215DFD81003CA3C0 /* XZBExtention.swift in Sources */,
